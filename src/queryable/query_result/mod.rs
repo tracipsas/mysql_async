@@ -36,6 +36,7 @@ use crate::{
 mod for_each;
 mod map;
 mod reduce;
+pub mod stream;
 
 pub type ForEachAndDrop<S, T, P, F> =
     AndThen<Either<FutureResult<S, Error>, ForEach<T, P, F>>, BoxFuture<T>, fn(S) -> BoxFuture<T>>;

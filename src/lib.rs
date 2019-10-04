@@ -194,6 +194,8 @@ pub use self::queryable::{BinaryProtocol, TextProtocol};
 #[doc(inline)]
 pub use self::queryable::stmt::Stmt;
 
+pub use self::queryable::query_result::stream::RowStream;
+
 /// Futures used in this crate
 pub mod futures {
     pub use crate::conn::pool::futures::{DisconnectPool, GetConn};
